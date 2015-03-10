@@ -1,0 +1,7 @@
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+#all{width:300px; margin:20% auto 0 auto; }

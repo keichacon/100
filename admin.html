@@ -1,0 +1,57 @@
+<table class="table edit">
+        <thead>
+        <tr>
+            <th>Titulo</th>
+            <th>Contenido</th>
+            <th>Portada</th>
+            <th>Imagen1</th>
+            <th>Imagen2</th>
+            <th>Imagen3</th>
+            <th>Imagen4</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="(id, item) in items">
+            <td><input type="text" ng-model="item.titulo" ng-blur="updateItem(id)"/></td>
+            <td><input type="text" ng-model="item.contenido" ng-blur="updateItem(id)"/></td>
+            <td><input type="text" ng-model="item.portada" ng-blur="updateItem(id)"/></td>
+            <td><input type="text" ng-model="item.imagen1" ng-blur="updateItem(id)"/></td>
+            <td><input type="text" ng-model="item.imagen2" ng-blur="updateItem(id)"/></td>
+            <td><input type="text" ng-model="item.imagen3" ng-blur="updateItem(id)"/></td>
+            <td><input type="text" ng-model="item.imagen4" ng-blur="updateItem(id)"/></td>
+            <td>
+                <a href="#" ng-click="removeItem(id)" class="navbar-link">Eliminar</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div class="well">
+        <h4>Publicar Post</h4>
+
+        <form class="form-inline" role="form" novalidate ng-submit="addItem()">
+            <div class="form-group">
+                <input type="text" class="form-control" ng-model="newItem.titulo" placeholder="Titulo">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" ng-model="newItem.contenido" placeholder="Contenido">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" ng-model="newItem.portada" placeholder="Portada">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" ng-model="newItem.imagen1" placeholder="Imagen">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" ng-model="newItem.imagen2" placeholder="Imagen">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" ng-model="newItem.imagen3" placeholder="Imagen">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" ng-model="newItem.imagen4" placeholder="Imagen">
+            </div>
+            <button type="submit" class="btn btn-default">Publicar</button>
+        </form>
+    </div>
