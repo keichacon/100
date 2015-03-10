@@ -1,2 +1,3 @@
 # 100
-angular and firebase
+angular and firebase example with basic login
+
